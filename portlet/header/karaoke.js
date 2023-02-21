@@ -7,20 +7,25 @@ function startSound() {
   body.style.background = 'radial-gradient(#bff6ff, #83d9e7)';
 
   var portlet = body.getElementsByClassName('portlet-body')[0];
-  portlet.innerHTML = '<div id="playSound" class="button-search">♫ Mitsingen</div><div id="birthdayText"><p id="p1"></p><p id="p2"></p><p id="p3"></p><p id="p4"></p></div>';
+  portlet.innerHTML = '<div id="playSound" class="button-search">♫ Mitsingen</div><div id="birthdayText"><p id="p1"></p><p id="p2"></p><p id="p3"></p><p id="p4"></p></div><div class="button-search" id="birthdayBlog"><a href="https://www.govdata.de/web/guest/neues/-/blogs/wir-feiern-10-jahre-govdata">Mehr erfahren</a></div>';
   portlet.style.textAlign = 'center';
 
   var style = document.createElement('style');
   style.textContent =
-    '#playSound {' +
+    '#playSound, #birthdayBlog {' +
     '  display: inline-block;' +
     '  vertical-align: middle;' +
     '  padding: 1rem;' +
     '  border-radius: 0.5rem;' +
-    '  margin-right: 1rem;' +
+    '  margin: 0 1rem;' +
     '  cursor: pointer;' +
     '}' +
+	'#birthdayBlog a {' +
+    '  background-color: inherit;' +
+    '  color: inherit;' +
+    '}' +
     '#birthdayText {' +
+    '  font-family: "Source Sans Pro";' +
     '  display: inline-block;' +
     '  text-align: left;' +
     '  vertical-align: middle;' +
@@ -135,3 +140,5 @@ function startSound() {
 	}
   },false);
 }
+
+startSound();
